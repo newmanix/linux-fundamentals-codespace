@@ -1,17 +1,15 @@
 {
-  "name": "Intro to Linux DevContainer",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "name": "Linux Practice Environment",
+  "image": "ubuntu:22.04",
+  "features": {},
+  "postCreateCommand": "apt update && apt install -y git curl man-db && yes | unminimize",
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash"
   },
-  "postCreateCommand": "echo 'Welcome to Linux in Codespaces!'",
   "customizations": {
     "vscode": {
-      "extensions": ["timonwong.shellcheck"]
+      "extensions": []
     }
   },
-  "forwardPorts": [],
   "remoteUser": "root"
 }
